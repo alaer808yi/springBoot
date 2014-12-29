@@ -1,5 +1,3 @@
 Git is a version control system.
 Git is free softwore.
-o,fuck
-o,fuck,two
-o,fuck,three
+Git is a distributed SVN.
