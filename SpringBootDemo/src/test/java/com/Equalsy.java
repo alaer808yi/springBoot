@@ -2,13 +2,16 @@ package com;
 
 
 
-public class Equalsy {
+public final class Equalsy {
 	private  String s ;
 	
 	public Equalsy(String s){
 		this.s = s;
 	}
 	
+	public void speak(){
+		
+	}
 	
 
 
