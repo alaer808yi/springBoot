@@ -6,6 +6,7 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Configuration;
 
 import com.controller.ClientController;
+import com.controller.LoginController;
 import com.controller.WebController;
 import com.timer.TimeSchedule;
 
@@ -19,7 +20,7 @@ public class ApplicationMain extends SpringBootServletInitializer {
 	   //在更为正式的场景之中，这个方法可能会用来注册Spring Java配置类，它会定义应用中所有controller和服务的bean。
 	   @Override
 	    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		   Class[] clazzs = new Class[]{ApplicationMain.class,TimeSchedule.class,WebController.class,ClientController.class};
+		   Class[] clazzs = new Class[]{ApplicationMain.class,TimeSchedule.class,WebController.class,ClientController.class,LoginController.class};
 	        return builder.sources(clazzs);
 	    }
 	   
