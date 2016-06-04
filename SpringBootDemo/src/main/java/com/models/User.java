@@ -1,15 +1,28 @@
 package com.models;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
+
+@Entity
+@Table(name = "user")
 public class User implements Serializable{
 
 	/**
 	 * @describe 用户实体类
 	 */
 	private static final long serialVersionUID = 8275160324588977284L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	@NotNull
 	private String name;
+	@NotNull
 	private String password;
 	public int getId() {
 		return id;
