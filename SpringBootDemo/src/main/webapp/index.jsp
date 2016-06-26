@@ -13,10 +13,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<meta http-equiv="expires" content="0">    
 	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 	<meta http-equiv="description" content="This is my page">
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
   </head>
   
   <body>
-   <form id="userBean" method="post" action="<%=path%>/login/login.do">
+   <form id="userBean" method="post" action="<%=path%>/login/login">
     <table>
     <tr>
         <td>登录帐号:<input type="text" name="name" id="name"></td>

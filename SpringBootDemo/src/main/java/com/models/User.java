@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class User implements Serializable{
 
 	/**
-	 * @describe 用户实体类
+	 * @describe user
 	 */
 	private static final long serialVersionUID = 8275160324588977284L;
 	@Id

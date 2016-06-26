@@ -37,6 +37,15 @@
             </Pattern>
         </layout>
     </appender>
+   <!--   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<Pattern>.%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg %n
+			</Pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>TRACE</level>
+		</filter>
+    </appender> -->
     
     <!-- hibernate日志输入 -->
     <logger name="org.hibernate.type.descriptor.sql.BasicBinder"
@@ -50,6 +59,7 @@
     <root level="INFO">
         <appender-ref ref="INFO_FILE" />
         <appender-ref ref="ERROR_FILE" />
+     <!--   <appender-ref ref="CONSOLE" /> --> 
     </root>
     
 </configuration>

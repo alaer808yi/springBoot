@@ -5,16 +5,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import com.controller.ClientController;
-import com.controller.LoginController;
-import com.controller.WebController;
-import com.timer.TimeSchedule;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 
 @EnableAutoConfiguration
 @Configuration
+@EnableTransactionManagement
 @ComponentScan(basePackages={"com.repository","com.controller","com.service"})
 public class ApplicationMain extends SpringBootServletInitializer {
 	   
