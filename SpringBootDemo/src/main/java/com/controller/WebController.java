@@ -66,17 +66,18 @@ public class WebController {
 //		User user = new User();
 //		httpPost.setEntity(user);
 		HttpGet httpGet = new HttpGet("http://localhost:8080/SpringBootDemo/getclient/"+name);
-		HttpResponse httpResponse;
+		CloseableHttpResponse httpResponse;
 		try {
 			httpResponse = httpClient.execute(httpGet);
 		
 		int status = httpResponse.getStatusLine().getStatusCode();
 		
-		
 		System.out.println("code "+ status);
 		HttpEntity entity = httpResponse.getEntity();
 		
+		httpGet.isAborted()
 		
+		httpGet.releaseConnection();
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(entity.getContent()));
 		StringBuffer sb = new StringBuffer();
 		while(bReader.readLine() != null){
