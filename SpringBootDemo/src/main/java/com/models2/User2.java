@@ -1,4 +1,4 @@
-package com.models;
+package com.models2;
 
 import java.io.Serializable;
 
@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "user")
-public class User implements Serializable{
+public class User2 implements Serializable{
 
 	/**
 	 * @describe user
@@ -66,7 +66,7 @@ public class User implements Serializable{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		User other = (User) obj;
+		User2 other = (User2) obj;
 		if (id != other.id)
 			return false;
 		if (name == null) {

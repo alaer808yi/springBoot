@@ -5,12 +5,14 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 
 @Entity
-@Table(name = "LoginLog")
+@Table(name = "Login_Log")
 public class LoginLog implements Serializable{
 	
 	/**
@@ -19,12 +21,16 @@ public class LoginLog implements Serializable{
 	private static final long serialVersionUID = -9157068531005486090L;
 	@Id
 	private long logid;//uuid；
-	@NotNull
-	private int userid;
+
+
+	@ManyToOne
+	@JoinColumn(name="userid",nullable=false)
+	private User user;
+	
 	@NotNull
 	private String sessionid;
 	@NotNull
-	private boolean isactive;
+	private int isactive;
 	@NotNull
 	private Date logintime;
 	private Date logouttime;
@@ -34,22 +40,19 @@ public class LoginLog implements Serializable{
 	public void setLogid(long logid) {
 		this.logid = logid;
 	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
+
+
+	
 	public String getSessionid() {
 		return sessionid;
 	}
 	public void setSessionid(String sessionid) {
 		this.sessionid = sessionid;
 	}
-	public boolean isIsactive() {
+	public int isIsactive() {
 		return isactive;
 	}
-	public void setIsactive(boolean isactive) {
+	public void setIsactive(int isactive) {
 		this.isactive = isactive;
 	}
 	public Date getLogintime() {
@@ -63,6 +66,12 @@ public class LoginLog implements Serializable{
 	}
 	public void setLogouttime(Date logouttime) {
 		this.logouttime = logouttime;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 

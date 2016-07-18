@@ -64,8 +64,8 @@ public class LoginController {
 		session.setAttribute("user", user);
 		LoginLog log = new LoginLog();
 		log.setLogid(UUID.randomUUID().getLeastSignificantBits());
-		log.setIsactive(true);
-		log.setUserid(user.getId());
+		log.setIsactive(1);
+		log.setUser(user);
 		log.setLogintime(new Date());
 		log.setSessionid(session.getId());
 		logRepository.save(log);

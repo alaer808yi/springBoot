@@ -75,7 +75,7 @@ public class WebController {
 		System.out.println("code "+ status);
 		HttpEntity entity = httpResponse.getEntity();
 		
-		httpGet.isAborted()
+		httpGet.releaseConnection();
 		
 		httpGet.releaseConnection();
 		BufferedReader bReader = new BufferedReader(new InputStreamReader(entity.getContent()));
