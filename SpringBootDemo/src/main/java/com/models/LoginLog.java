@@ -3,6 +3,7 @@ package com.models;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -28,6 +29,7 @@ public class LoginLog implements Serializable{
 	private User user;
 	
 	@NotNull
+	@Column
 	private String sessionid;
 	@NotNull
 	private int isactive;
