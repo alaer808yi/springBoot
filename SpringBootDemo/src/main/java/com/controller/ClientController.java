@@ -10,30 +10,27 @@ import com.models2.User2;
 import com.repository2.UserRepository2;
 
 
-
-
-
-
 @RestController
 @RequestMapping("/getclient")
 @Configuration
 public class ClientController {
 
-	@Autowired
-	UserRepository2 userRepository2;
-	
-	@RequestMapping("/{name}")
-	public String deal(@PathVariable("name") String name){
-		System.out.println("get "+ name);
-		
-		return name+"---> OK";
-		
-	}
-	@RequestMapping("/testmutipleDatasource")
-	public User2 getUser2(){
-		return userRepository2.findByName("sadf");
-	}
-	
-	
+    @Autowired
+    UserRepository2 userRepository2;
+
+    @RequestMapping("/{name}")
+    public String deal(@PathVariable("name") String name) {
+        System.out.println("get " + name);
+
+        return name + "---> OK";
+
+    }
+
+    @RequestMapping("/testmutipleDatasource")
+    public User2 getUser2() {
+        return userRepository2.findByName("sadf");
+    }
+
+
 
 }
